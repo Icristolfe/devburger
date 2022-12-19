@@ -7,7 +7,7 @@ import * as Yup from 'yup'
 
 import Burguer from '../../assets/burguer.svg'
 import Logo from '../../assets/logo.svg'
-import Button from '../../components/Button/index.js'
+import { Button } from '../../components'
 import { useUser } from '../../hooks/UserContext'
 import api from '../../services/api.js'
 import {
@@ -20,7 +20,7 @@ import {
   ErrorMessage
 } from './styles'
 
-function Login() {
+export function Login() {
   const navigate = useNavigate()
 
   const { putUserData } = useUser()
@@ -105,5 +105,3 @@ function Login() {
     </Container>
   )
 }
-
-export default Login

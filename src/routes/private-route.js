@@ -7,8 +7,9 @@ function PrivateRoute({ element, children, ...rest }) {
 
   if (!user) {
     return <Navigate replace to="/login" />
+  } else {
+    return children
   }
-  return children
 }
 
 export default PrivateRoute
