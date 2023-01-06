@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Carousel from 'react-elastic-carousel'
+import { useNavigate } from 'react-router-dom'
 
 import Offer from '../../assets/offers.svg'
+import { useCart } from '../../hooks/CartContext'
 import api from '../../services/api.js'
 import formatCurrency from '../../Utils/formatCurrency'
 import {
@@ -36,7 +38,8 @@ export function OfferCarousel() {
     { width: 900, itemsToShow: 4 },
     { width: 1300, itemsToShow: 5 }
   ]
-
+  const { putProductInCart } = useCart()
+  const navigate = useNavigate()
   return (
     <Container>
       <OfferImage src={Offer} alt="home logo" />
@@ -49,6 +52,10 @@ export function OfferCarousel() {
               <P>{product.name}</P>
               <P price={true}>{product.formatedPrice}</P>
               <Button
+                onClick={() => {
+                  putProductInCart(product)
+                  navigate('/carrinho')
+                }}
                 style={{
                   fontWeight: 700,
                   fontSize: 18

@@ -21,7 +21,9 @@ export const CartProvider = ({ children }) => {
       setCartProducts(newCartProducts)
     }
     await updateLocalStorage(newCartProducts)
+    toast.success(`${product.name} Adicionado Com  Sucesso`)
   }
+
   const deleteProduct = async productId => {
     const newCart = cartProducts.filter(product => product.id !== productId)
 

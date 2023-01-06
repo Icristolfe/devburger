@@ -11,6 +11,10 @@ export const UserProvider = ({ children }) => {
     // Salvando dados do userData no localStorage
     await localStorage.setItem('devburguer:userData', JSON.stringify(userInfo))
   }
+
+  const logout = async () => {
+    await localStorage.removeItem('devburguer:userData')
+  }
   // useEffect para recuperar dados do localStorage e gravar no userData novamente
   useEffect(() => {
     const loadUserData = async () => {
@@ -24,7 +28,7 @@ export const UserProvider = ({ children }) => {
   }, [])
 
   return (
-    <UserContext.Provider value={{ userData, putUserData }}>
+    <UserContext.Provider value={{ userData, putUserData, logout }}>
       {children}
     </UserContext.Provider>
   )

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
 import ProductsLogo from '../../assets/products-logo.svg'
+import { Header } from '../../components'
 import { CardProduct } from '../../components/CardProducts'
 import api from '../../services/api'
 import {
@@ -12,9 +14,14 @@ import {
 } from './styles'
 
 export function Products() {
+  const { state } = useLocation()
+  let categoryId = 0
+  if (state?.categoryId) {
+    categoryId = state.categoryId
+  }
+  const [activeCategory, setActiveCategory] = useState(categoryId)
   const [category, setCategory] = useState([])
   const [products, setProducts] = useState([])
-  const [activeCategory, setActiveCategory] = useState(0)
 
   const [filteredProducts, setFilteredProducts] = useState([])
 
@@ -47,6 +54,7 @@ export function Products() {
 
   return (
     <Container>
+      <Header />
       <ProductsImage src={ProductsLogo} alt="logo de produtos" />
       <CategoriesMenu>
         {category &&

@@ -98,7 +98,7 @@ export function Login() {
             </Button>
           </form>
           <SignUpLink>
-            Não possui conta? <a href={'/register'}>Registre-se</a>
+            Não possui conta? <a href={'/cadastro'}>Registre-se</a>
           </SignUpLink>
         </div>
       </ContainerItens>

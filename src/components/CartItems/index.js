@@ -22,9 +22,9 @@ export function CartItems() {
             <p>{product.name}</p>
             <p>{formatCurrency(product.price)}</p>
             <div className="quantity-container">
-              <button onClick={() => increaseProduct(product.id)}>+</button>
-              <p>{product.quantity}</p>
               <button onClick={() => decreaseProduct(product.id)}>–</button>
+              <p>{product.quantity}</p>
+              <button onClick={() => increaseProduct(product.id)}>+</button>
             </div>
             <p>{formatCurrency(product.quantity * product.price)}</p>
           </Body>

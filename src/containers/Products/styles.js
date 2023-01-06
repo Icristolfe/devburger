@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  min-height: 100vh;
+  min-height: calc(100vh -72px);
   background-color: #e5e5e5;
 `
 
