@@ -1,22 +1,61 @@
-import EditIcon from '@mui/icons-material/Edit'
 import styled from 'styled-components'
 
-export const Container = styled.div``
+import { Button } from '../../../components/Button'
 
-export const Img = styled.img`
-  width: 70px;
-  border-radius: 10px;
+export const Container = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #565656;
+    border-radius: 10px;
+    padding: 30px;
+  }
 `
 
-export const EditedIcon = styled(EditIcon)`
+export const Label = styled.label`
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 3px;
+  font-weight: 500;
+`
+
+export const Input = styled.input`
+  width: 100%;
+  height: 40px;
+  background: #ffffff;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: none;
+  padding-left: 20px;
+  margin-bottom: 25px;
+  min-width: 280px;
+`
+
+export const ButtonStyle = styled(Button)`
+  width: 100%;
+  margin-top: 25px;
+`
+
+export const LabelUpload = styled.label`
   cursor: pointer;
-  color: #323d5d;
+  display: flex;
+  align-items: center;
+  border: 1px dashed #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 25px;
+  gap: 10px;
 
-  &&:hover {
-    opacity: 0.8;
-  }
-
-  &&:active {
-    opacity: 0.5;
+  input {
+    opacity: 0;
+    width: 1px;
   }
 `
