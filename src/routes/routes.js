@@ -64,6 +64,15 @@ function RoutesApp() {
             </PrivateRoute>
           }
         />
+
+        <Route
+          path={paths.EditProduct}
+          element={
+            <PrivateRoute isAdmin>
+              <Admin />
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </BrowserRouter>
   )

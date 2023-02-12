@@ -9,13 +9,6 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  justify-content: flex-start;
-  gap: 50px;
-
-  h1 {
-    font-weight: 800;
-    letter-spacing: 2px;
-  }
 
   form {
     display: flex;
@@ -63,5 +56,16 @@ export const LabelUpload = styled.label`
   input {
     opacity: 0;
     width: 1px;
+  }
+`
+export const ContainerInput = styled.div`
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+
+  input {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
   }
 `
