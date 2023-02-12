@@ -7,7 +7,7 @@ import * as Yup from 'yup'
 
 import Burguer from '../../assets/burguer.svg'
 import Logo from '../../assets/logo.svg'
-import { Button } from '../../components'
+import { Button, ErrorMessage } from '../../components'
 import { useUser } from '../../hooks/UserContext'
 import api from '../../services/api.js'
 import {
@@ -16,8 +16,7 @@ import {
   ContainerItens,
   Label,
   Input,
-  SignUpLink,
-  ErrorMessage
+  SignUpLink
 } from './styles'
 
 export function Login() {

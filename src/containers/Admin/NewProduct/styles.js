@@ -17,13 +17,14 @@ export const Container = styled.div`
     background: #565656;
     border-radius: 10px;
     padding: 30px;
+    gap: 25px;
   }
 `
 
 export const Label = styled.label`
   font-size: 14px;
   color: #ffffff;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
   font-weight: 500;
 `
 
@@ -35,7 +36,6 @@ export const Input = styled.input`
   border-radius: 10px;
   border: none;
   padding-left: 20px;
-  margin-bottom: 25px;
   min-width: 280px;
 `
 
@@ -51,7 +51,6 @@ export const LabelUpload = styled.label`
   border: 1px dashed #ffffff;
   border-radius: 5px;
   padding: 10px;
-  margin-bottom: 25px;
   gap: 10px;
 
   input {
